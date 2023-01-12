@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: orangered;
+    align-items: center;
+    justify-content: center;
+    min-height: 15vh;
+}
+
+.devInfo {
+    font-size: 1.5rem;
+}

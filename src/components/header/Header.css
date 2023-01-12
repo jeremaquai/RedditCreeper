@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: azure;
+}
+
+.logo,
+.searchBar {
+    display: flex;
+    align-items: center;
+    color: orangered;
+}
+
+.redditLogo {
+    height: 2rem;
+}
+
+#logoOne {
+    color: orangered;
+}
+
+#logoTwo {
+    color: blue;
+}
