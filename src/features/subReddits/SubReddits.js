@@ -1,7 +1,16 @@
 import React, { useEffect, } from "react";
 import './SubReddits.css';
-import { fetchSubRedditsAsync, selectSubReddits, selectIsLoading,  } from "./subRedditsSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { 
+    fetchSubRedditsAsync,
+    selectSubReddits,
+    selectIsLoading,  
+} from "./subRedditsSlice";
+
+import { 
+    useDispatch,
+    useSelector 
+} from "react-redux";
+
 import { addActiveSub } from "./subRedditsSlice";
 
 export default function SubReddits() {
@@ -19,7 +28,7 @@ export default function SubReddits() {
     }, [dispatch]);
 
     const getRandomSubReddits = () => {
-        let randomSubRedditsList = [];
+        const randomSubRedditsList = [];
 
         for (let i = 1; i <= 10; i++) {
             const int = Math.floor(Math.random() * subReddits.length);
@@ -31,7 +40,7 @@ export default function SubReddits() {
     }
 
 
-    let randomSubReddits = getRandomSubReddits(subReddits);
+    const randomSubReddits = getRandomSubReddits(subReddits);
     console.log(randomSubReddits);
 
     const loadingAction = () => {
