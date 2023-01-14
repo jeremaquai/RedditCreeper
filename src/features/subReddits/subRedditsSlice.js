@@ -10,7 +10,7 @@ const initialState = {
     failed: false,
 };
 
-const API_ROOT = 'https://www.reddit.com'
+const API_ROOT = 'https://www.reddit.com';
 
 
 export const fetchSubRedditsAsync = createAsyncThunk(
@@ -94,5 +94,6 @@ export const { addSubReddits, addActiveSub, addRandomSubReddits } = subRedditsSl
 
 export const selectSubReddits = (state) => state.subReddits.subReddits;
 export const selectIsLoading = (state) => state.subReddits.loading;
+export const selectActiveSub = (state) => state.subReddits.activeSub;
 
 export default subRedditsSlice.reducer;
