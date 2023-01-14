@@ -3,6 +3,7 @@ import Reddit from "../../utils/Reddit";
 
 const initialState = {
     subReddits: [],
+    randomSubReddits: [],
     activeSub: '',
     loading: false,
     fulfilled: false,
@@ -10,6 +11,7 @@ const initialState = {
 };
 
 const API_ROOT = 'https://www.reddit.com'
+
 
 export const fetchSubRedditsAsync = createAsyncThunk(
     'subReddits/fetchSubReddits',
@@ -25,7 +27,7 @@ export const fetchSubRedditsAsync = createAsyncThunk(
 
         console.log(subReddits);
 
-       for (let i = 0; i < 33; i++) {
+       for (let i = 0; i < 42; i++) {
         let lastId = json.data.children[99].data.name;
 
         response = await fetch(`${API_ROOT}/subreddits.json?q&after=${lastId}&limit=100`);
@@ -35,31 +37,6 @@ export const fetchSubRedditsAsync = createAsyncThunk(
             subReddits.push(element);
         });
        }
-
-        // let lastId = json.data.children[99].data.name;
-
-        // response = await fetch(`${API_ROOT}/subreddits.json?q&after=${lastId}&limit=100`);
-        
-        // json = await response.json();
-        // json.data.children.forEach(element => {
-        //     subReddits.push(element);
-        // });
-
-        
-
-        // lastId = json.data.children[99].data.name;
-
-        // response = await fetch(`${API_ROOT}/subreddits.json?q&after=${lastId}&limit=100`);
-
-        // json = await response.json();
-        // json.data.children.forEach(element => {
-        //     subReddits.push(element);
-        // });
-
-        // console.log(subReddits);
-
-        // // console.log(json1.data.children);
-        // console.log(subReddits);
         
         return subReddits.map(item => {
             return ( {
@@ -82,6 +59,9 @@ export const subRedditsSlice = createSlice({
     name: 'subReddits',
     initialState,
     reducers: {
+        addRandomSubReddits: (state, action) => {
+            state.randomSubReddits = action.payload;
+        },
         addSubReddits: (state, action) => {
             state.subReddits = action.payload;
         },
@@ -110,8 +90,9 @@ export const subRedditsSlice = createSlice({
     }
 });
 
-export const { addSubReddits, addActiveSub } = subRedditsSlice.actions;
+export const { addSubReddits, addActiveSub, addRandomSubReddits } = subRedditsSlice.actions;
 
 export const selectSubReddits = (state) => state.subReddits.subReddits;
+export const selectIsLoading = (state) => state.subReddits.loading;
 
 export default subRedditsSlice.reducer;
