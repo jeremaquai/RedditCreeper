@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk, useSelector } from "@reduxjs/toolkit";
-import { act } from "react-dom/test-utils";
 import { selectActiveSub } from "../subReddits/subRedditsSlice";
 
 const initialState = {
