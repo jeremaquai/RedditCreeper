@@ -46,13 +46,15 @@ export default function SubReddits() {
     const loadingAction = () => {
         while (isLoading) {
             return (
-                <h2>Loading...</h2>
+                <div className="loading">
+                    <h2>Loading...</h2>
+                </div>
             );
         } 
         
         while (!isLoading) {
             return (
-                <div className="outerSub">
+                <div className="innerSub">
                     {randomSubReddits.map(item => {
                         if (!item) {
                             return ;
@@ -79,7 +81,7 @@ export default function SubReddits() {
     }
 
     return (
-        <div>
+        <div className="outerSub">
             <h3>Ten Random SubReddits to Browse</h3>
             <p>Refresh to change buttons</p>
             {loadingAction()}

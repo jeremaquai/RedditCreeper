@@ -1,4 +1,5 @@
-import { createSlice, createAsyncThunk, useSelector } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { useSelector } from "react-redux";
 import { selectActiveSub } from "../subReddits/subRedditsSlice";
 
 const initialState = {
@@ -10,7 +11,7 @@ const initialState = {
 };
 
 const API_ROOT = 'https://www.reddit.com';
-const ACTIVE_SUB = useSelector(selectActiveSub);
+
 
 export const postsSlice = createSlice({
     name: 'posts',
@@ -24,7 +25,7 @@ export const postsSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder
+        // builder
             // .addCase()
     },
 });
@@ -34,5 +35,6 @@ export const { addPosts, addActivePost } = postsSlice.actions;
 export const selectPosts = (state) => state.posts.posts;
 export const selectPostsLoading = (state) => state.posts.loading;
 export const selectActivePosts = (state) => state.posts.activePost;
+export const selectIsLoading = (state) => state.posts.loading;
 
 export default postsSlice.reducer;

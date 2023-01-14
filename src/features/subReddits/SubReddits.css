@@ -1,18 +1,25 @@
+
+
+.outerSub {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    min-height: 15vh;
+    max-height: 15vh;
+    overflow: scroll;
+    border: 2px solid black;
+}
+
+.innerSub {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .subreddit {
     border: 1px solid black;
     padding: 3px;
     width: auto;
     margin: .5rem;
-}
-
-.outerSub {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 100vw;
-    flex-wrap: wrap;
-    min-height: 15vh;
-    max-height: 15vh;
-    overflow: scroll;
-    border: 2px solid black;
 }
