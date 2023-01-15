@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import './Posts.css';
 
-import { addActivePost, selectIsLoading } from "./postsSlice";
+import { addActivePost, fetchSubRedditPostsAsync, selectIsLoading } from "./postsSlice";
 import { selectActiveSub } from "../subReddits/subRedditsSlice";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -12,6 +12,10 @@ export default function Posts() {
     const ACTIVE_SUB = useSelector(selectActiveSub);
 
     const isLoading = useSelector(selectIsLoading);
+
+    // useEffect(() => {
+    //     dispatch(fetchSubRedditPostsAsync());
+    // }, [dispatch]);
 
     const loadingAction = () => {
         while (isLoading) {

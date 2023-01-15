@@ -4,7 +4,7 @@ import Reddit from "../../utils/Reddit";
 const initialState = {
     subReddits: [],
     randomSubReddits: [],
-    activeSub: '',
+    activeSub: '/r/Home',
     loading: false,
     fulfilled: false,
     failed: false,

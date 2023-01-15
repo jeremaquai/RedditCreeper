@@ -13,6 +13,19 @@ const initialState = {
 const API_ROOT = 'https://www.reddit.com';
 
 
+export const fetchSubRedditPostsAsync = createAsyncThunk(
+    'posts/fetchPosts',
+    async () => {
+        const SUB_REDDIT_URL = useSelector(selectActiveSub);
+        const posts = [];
+        let response = await fetch(`${API_ROOT}${SUB_REDDIT_URL}.json`);
+        // console.log(response);
+        let json = await response.json();
+        console.log(json);
+    }
+);
+
+
 export const postsSlice = createSlice({
     name: 'posts',
     initialState,
@@ -25,8 +38,23 @@ export const postsSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        // builder
-            // .addCase()
+        builder
+            .addCase(fetchSubRedditPostsAsync.pending, (state) => {
+                state.loading = true;
+                state.fulfilled = false;
+                state.rejected = false;
+            })
+            .addCase(fetchSubRedditPostsAsync.rejected, (state) => {
+                state.loading = false;
+                state.rejected = true;
+                state.fulfilled = false;
+            })
+            .addCase(fetchSubRedditPostsAsync.fulfilled, (state, action) => {
+                state.loading = false;
+                state.rejected = false;
+                state.fulfilled = true;
+                state.posts = action.payload;
+            })
     },
 });
 

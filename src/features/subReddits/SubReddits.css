@@ -4,8 +4,7 @@
     display: flex;
     flex-direction: column;
     max-width: 100vw;
-    min-height: 15vh;
-    max-height: 15vh;
+    min-width: 100vw;
     overflow: scroll;
     border: 2px solid black;
 }
@@ -15,11 +14,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: cornsilk;
 }
 
 .subreddit {
     border: 1px solid black;
+    border-radius: 15px;
     padding: 3px;
     width: auto;
     margin: .5rem;
+    background-color: orangered;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.subreddit img {
+    height: 50px;
+    width: auto;
+    z-index: inherit;
 }

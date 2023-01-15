@@ -6,12 +6,15 @@ import {
     selectIsLoading,  
 } from "./subRedditsSlice";
 
+import { fetchSubRedditPostsAsync } from "../posts/postsSlice";
+
 import { 
     useDispatch,
     useSelector 
 } from "react-redux";
 
 import { addActiveSub } from "./subRedditsSlice";
+import { Link } from "react-router-dom";
 
 export default function SubReddits() {
 
@@ -55,12 +58,13 @@ export default function SubReddits() {
         while (!isLoading) {
             return (
                 <div className="innerSub">
-                    {randomSubReddits.map(item => {
+                    {subReddits.map(item => {
                         if (!item) {
                             return ;
                         } else {
                             return (
-                                <button 
+                                <div>
+                                {/* <button 
                                     className="subreddit" 
     
                                     key={item.name ? item.name : 'Name'}
@@ -71,7 +75,22 @@ export default function SubReddits() {
                                     }}
                                     >
                                          {item.displayName || 'Name'}
-                                </button>
+                                </button> */}
+                                <Link to='/posts'>
+                                    <div className="subreddit"
+                                        key={item.name}
+                                        onClick={
+                                            async function(e) {
+                                                dispatch(addActiveSub(item.url)).then(dispatch(fetchSubRedditPostsAsync()));
+                                                
+                                        }
+                                        }>
+                                            <h2>{item.url}</h2>
+                                            <img src={item.headerImg} />
+                                            
+                                    </div>
+                                </Link>
+                                </div>
                             );
                         }
                     })}

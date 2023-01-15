@@ -4,15 +4,13 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import SubReddits from '../features/subReddits/SubReddits';
 import Posts from '../features/posts/Posts';
+import Main from '../components/main/Main';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <div className='homePage'>
-        <SubReddits />
-        <Posts />
-      </div>
+        <Main />
       <Footer />
     </div>
   );
