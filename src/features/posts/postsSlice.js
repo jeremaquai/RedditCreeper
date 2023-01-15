@@ -15,11 +15,12 @@ const API_ROOT = 'https://www.reddit.com';
 
 export const fetchSubRedditPostsAsync = createAsyncThunk(
     'posts/fetchPosts',
-    async () => {
+    async (id) => {
         const SUB_REDDIT_URL = useSelector(selectActiveSub);
+        console.log(SUB_REDDIT_URL);
         const posts = [];
-        let response = await fetch(`${API_ROOT}${SUB_REDDIT_URL}.json`);
-        // console.log(response);
+        let response = await fetch(`${API_ROOT}${id}.json`);
+        console.log(response);
         let json = await response.json();
         console.log(json);
     }

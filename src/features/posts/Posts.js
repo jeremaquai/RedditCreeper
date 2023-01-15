@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import './Posts.css';
 
 import { addActivePost, fetchSubRedditPostsAsync, selectIsLoading } from "./postsSlice";
@@ -13,9 +13,6 @@ export default function Posts() {
 
     const isLoading = useSelector(selectIsLoading);
 
-    // useEffect(() => {
-    //     dispatch(fetchSubRedditPostsAsync());
-    // }, [dispatch]);
 
     const loadingAction = () => {
         while (isLoading) {

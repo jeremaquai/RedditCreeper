@@ -30,22 +30,6 @@ export default function SubReddits() {
         dispatch(fetchSubRedditsAsync());
     }, [dispatch]);
 
-    const getRandomSubReddits = () => {
-        const randomSubRedditsList = [];
-
-        for (let i = 1; i <= 10; i++) {
-            const int = Math.floor(Math.random() * subReddits.length);
-            const randomSubReddit = subReddits[int];
-            randomSubRedditsList.push(randomSubReddit);
-        }
-        console.log(randomSubRedditsList);
-        return randomSubRedditsList;
-    }
-
-
-    const randomSubReddits = getRandomSubReddits(subReddits);
-    console.log(randomSubReddits);
-
     const loadingAction = () => {
         while (isLoading) {
             return (
@@ -76,12 +60,12 @@ export default function SubReddits() {
                                     >
                                          {item.displayName || 'Name'}
                                 </button> */}
-                                <Link to='/posts'>
+                                <Link key={item.name} to='/posts'>
                                     <div className="subreddit"
-                                        key={item.name}
+                                        
                                         onClick={
                                             async function(e) {
-                                                dispatch(addActiveSub(item.url)).then(dispatch(fetchSubRedditPostsAsync()));
+                                                dispatch(addActiveSub(item.url));
                                                 
                                         }
                                         }>
