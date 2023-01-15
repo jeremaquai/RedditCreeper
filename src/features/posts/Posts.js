@@ -55,6 +55,15 @@ export default function Posts() {
                                 <div key={item.id} className={'postCard'}>
                                     <img src={checkThumbnailAction(item)} >
                                     </img>
+                                    <div className="postCardInfo">
+                                        <h3> {item.title} </h3>
+                                        <p> {item.text} </p>
+                                        <div className="postInfo">
+                                            <h4>Created by: {item.author} </h4>
+                                            <h4>Up Votes: {item.upVotes} </h4>
+                                            <h4>Down Votes: {item.downVotes} </h4>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </Link>
