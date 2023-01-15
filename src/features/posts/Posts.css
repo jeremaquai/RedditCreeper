@@ -1,0 +1,17 @@
+.posts {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.postCard {
+    background-color: orangered;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.postCard img {
+    max-height: 100px;
+    width: auto;
+    
+}

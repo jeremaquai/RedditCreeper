@@ -11,6 +11,9 @@ export default function Main() {
     return (
         <div className="main">
             <Switch>
+                <Route path={'/individualPost'} >
+
+                </Route>
                 <Route path='/posts'>
                     <Posts />
                 </Route>
