@@ -11,11 +11,7 @@ import { fetchSubRedditPostsAsync } from '../features/posts/postsSlice';
 
 function App() {
 
-  const dispatch = useDispatch();
-  const ACTIVE_SUB = useSelector(selectActiveSub);
-  useEffect(() => {
-    dispatch(fetchSubRedditPostsAsync(ACTIVE_SUB));
-}, [dispatch]);
+  
 
   return (
     <div className='App'>

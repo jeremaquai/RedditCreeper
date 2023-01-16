@@ -9,7 +9,7 @@ export default function SearchBar() {
     const dispatch = useDispatch();
     const [searchTerm, setSearchTerm] = useState('');
     
-    const handleSubmit=() => {
+    const handleSubmit = () => {
         
         dispatch(addSearchTerm(searchTerm));
     }
