@@ -26,9 +26,21 @@ export default function IndividualPost() {
         <div key={POST[0].id} className="indPostCard" >
             <h2> {POST[0].title } </h2>
             <div className="authorBanner" >
-                <h3> u/{POST[0].author} </h3>
-                <h3>Up Votes: {POST[0].ups}</h3>
-                <h3>Down Votes: {POST[0].downs} </h3>
+                <div className="author" >
+                    <h3>Created by:</h3>
+                    <h3 className="info" > u/{POST[0].author} </h3>
+                </div>
+                <div className="upVotes" >
+                    <h3>Up Votes: </h3>
+                    <h3 className="info" > {POST[0].ups}</h3>
+                </div>
+                <div className="downVotes" >
+                    <h3>Down Votes: </h3>
+                    <h3 className="info" >{POST[0].downs} </h3>
+                </div>
+                
+                
+                
             </div>
             
             <img src={ POST[0].imgSrc ? POST[0].imgSrc : '#'} />

@@ -64,9 +64,19 @@ export default function Posts() {
                                         <h3> {item.title} </h3>
                                         {/* <p> {item.text} </p> */}
                                         <div className="postInfo">
-                                            <h4>Created by: <span className="postInfoText" >{item.author}</span> </h4>
-                                            <h4>Up Votes: <span className="postInfoText" >{item.upVotes}</span> </h4>
-                                            <h4>Down Votes: <span className="postInfoText" >{item.downVotes}</span> </h4>
+                                            <div className="createdBy" >
+                                                <h4>Created by: </h4>
+                                                <h4 className="postInfoText">{item.author}</h4>
+                                            </div>
+                                            <div className="upVotes" >
+                                                <h4>Up Votes:  </h4>
+                                                <h4 className="postInfoText" >{item.upVotes}</h4>
+                                            </div>
+                                            <div className="downVotes" >
+                                            <h4>Down Votes: </h4>
+                                                <h4 className="postInfoText" >{item.downVotes}</h4>
+                                            </div>
+                                            
                                         </div>
                                     </div>
 
