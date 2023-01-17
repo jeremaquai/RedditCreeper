@@ -1,0 +1,22 @@
+.commentCard {
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: azure;
+    border-radius: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info h4 {
+    font-size: small;
+}
+
+.body {
+    padding: 2rem;
+}

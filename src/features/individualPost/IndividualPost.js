@@ -8,6 +8,7 @@ import { fetcchIndividualPostCommentsAsync, selectPost } from "./individualPostS
 import { fetchIndividualPostAsync } from "./individualPostSlice";
 
 import { useDispatch, useSelector } from "react-redux";
+import Comments from "../comments/Comments";
 
 export default function IndividualPost() {
 
@@ -32,6 +33,7 @@ export default function IndividualPost() {
             
             <img src={ POST[0].imgSrc ? POST[0].imgSrc : '#'} />
             <p> {POST[0].text} </p>
+            <Comments />
         </div>
     );
 }
