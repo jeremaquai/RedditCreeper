@@ -39,7 +39,7 @@ export default function Posts() {
     const loadingAction = () => {
         while (isLoading) {
             return (
-                <div>
+                <div className="loading" >
                     <h2>Loading...</h2>
                 </div>
             );
@@ -51,17 +51,22 @@ export default function Posts() {
                     <h2>Posts</h2>
                     {POSTS.map(item => {
                         return (
-                            <Link to={'/individualPost'} >
-                                <div key={item.id} className={'postCard'}>
-                                    <img src={checkThumbnailAction(item)} >
+                            <Link key={item.id} to={'/individualPost'} >
+                                <div  className={'postCard'}
+                                    onClick={
+                                        async function(e) {
+                                            dispatch(addActivePost(item.permalink));
+                                        }
+                                        }>
+                                    <img src={item.thumbnail} >
                                     </img>
                                     <div className="postCardInfo">
                                         <h3> {item.title} </h3>
-                                        <p> {item.text} </p>
+                                        {/* <p> {item.text} </p> */}
                                         <div className="postInfo">
-                                            <h4>Created by: {item.author} </h4>
-                                            <h4>Up Votes: {item.upVotes} </h4>
-                                            <h4>Down Votes: {item.downVotes} </h4>
+                                            <h4>Created by: <span className="postInfoText" >{item.author}</span> </h4>
+                                            <h4>Up Votes: <span className="postInfoText" >{item.upVotes}</span> </h4>
+                                            <h4>Down Votes: <span className="postInfoText" >{item.downVotes}</span> </h4>
                                         </div>
                                     </div>
 

@@ -27,16 +27,16 @@ export const fetchSubRedditsAsync = createAsyncThunk(
 
         console.log(subReddits);
 
-    //    for (let i = 0; i < 10; i++) {
-    //     let lastId = json.data.children[99].data.name;
+       for (let i = 0; i < 42; i++) {
+        let lastId = json.data.children[99].data.name;
 
-    //     response = await fetch(`${API_ROOT}/subreddits.json?&after=${lastId}&limit=100`);
+        response = await fetch(`${API_ROOT}/subreddits.json?&after=${lastId}&limit=100`);
         
-    //     json = await response.json();
-    //     json.data.children.forEach(element => {
-    //         subReddits.push(element);
-    //     });
-    //    }
+        json = await response.json();
+        json.data.children.forEach(element => {
+            subReddits.push(element);
+        });
+       }
         
         return subReddits.map(item => {
             return ( {

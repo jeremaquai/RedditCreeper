@@ -47,21 +47,8 @@ export default function SubReddits() {
                             return ;
                         } else {
                             return (
-                                <div>
-                                {/* <button 
-                                    className="subreddit" 
-    
-                                    key={item.name ? item.name : 'Name'}
-                                    url={item.url}
-                                    onClick={
-                                        function(e) {
-                                            dispatch(addActiveSub(item.url));
-                                    }}
-                                    >
-                                         {item.displayName || 'Name'}
-                                </button> */}
                                 <Link key={item.name} to='/posts'>
-                                    <div className="subreddit"
+                                    <div key={item.name} className="subreddit"
                                         
                                         onClick={
                                             async function(e) {
@@ -74,7 +61,6 @@ export default function SubReddits() {
                                             
                                     </div>
                                 </Link>
-                                </div>
                             );
                         }
                     })}
