@@ -15,11 +15,19 @@ export default function IndividualPost() {
     const dispatch = useDispatch();
     const POST = useSelector(selectPost);
 
-    const ACTIVE_POST = useSelector(selectActivePosts);
+    
+
+    const useACTIVE_POST = () => {
+        const ACTIVE_POST = useSelector(selectActivePosts);
+        return ACTIVE_POST
+    }
 
     useEffect(() => {
-        dispatch(fetchIndividualPostAsync(ACTIVE_POST));
-        dispatch(fetcchIndividualPostCommentsAsync(ACTIVE_POST));
+
+        
+
+        dispatch(fetchIndividualPostAsync(useACTIVE_POST));
+        dispatch(fetcchIndividualPostCommentsAsync(useACTIVE_POST));
     }, [dispatch]);
 
     return (
@@ -43,7 +51,7 @@ export default function IndividualPost() {
                 
             </div>
             
-            <img src={ POST[0].imgSrc ? POST[0].imgSrc : '#'} />
+            <img src={ POST[0].imgSrc ? POST[0].imgSrc : '#'} alt={''} />
             <p> {POST[0].text} </p>
             <Comments />
         </div>

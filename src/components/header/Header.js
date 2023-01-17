@@ -1,7 +1,7 @@
 import React from "react";
 import './Header.css';
 import logo from '../../images/reddit-4.svg';
-import SearchBar from "../../features/searchbar/SearchBar";
+// import SearchBar from "../../features/searchbar/SearchBar";
 
 export default function Header() {
     return (

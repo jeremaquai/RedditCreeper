@@ -3,7 +3,7 @@ import './Comments.css';
 
 import { useSelector } from "react-redux";
 
-import { selectComments, selectCommentsLoading } from "../individualPost/individualPostSlice";
+import { selectComments,  } from "../individualPost/individualPostSlice";
 
 
 export default function Comments() {

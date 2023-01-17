@@ -3,11 +3,8 @@ import './App.css';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Main from '../components/main/Main';
-import { useEffect, } from 'react';
-import { useSelector, useDispatch
-} from 'react-redux';
-import { selectActiveSub } from '../features/subReddits/subRedditsSlice';
-import { fetchSubRedditPostsAsync } from '../features/posts/postsSlice';
+
+
 
 function App() {
 

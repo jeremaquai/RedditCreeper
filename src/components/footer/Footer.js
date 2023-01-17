@@ -1,5 +1,4 @@
 import React from "react";
-import SubReddits from "../../features/subReddits/SubReddits";
 import './Footer.css';
 
 export default function Footer() {

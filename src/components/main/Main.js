@@ -1,5 +1,4 @@
-import { 
-    BrowserRouter as Router, 
+import {  
     Switch, 
     Route 
 } from "react-router-dom";
