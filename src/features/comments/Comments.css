@@ -2,9 +2,15 @@
     padding: 2rem;
     margin: 2rem;
     display: flex;
+    flex-direction: row;
     align-items: center;
     background-color: azure;
     border-radius: 15px;
+    max-width: 80%;
+}
+
+.comment {
+    width: 100%;
 }
 
 .info {
@@ -18,5 +24,6 @@
 }
 
 .body {
+    overflow: scroll;
     padding: 2rem;
 }

@@ -44,9 +44,9 @@ export default function SubReddits() {
                 <div className="innerSub">
                     {subReddits.map(item => {
                         
-                            if (!item) {
-                            return ;
-                        } else {
+                        //     if (!item) {
+                        //     return ;
+                        // } else {
                             return (
                                 <Link key={item.name} to='/posts'>
                                     <div key={item.name} className="subreddit"
@@ -58,14 +58,15 @@ export default function SubReddits() {
                                         }
                                         }>
                                             <h2>{item.url}</h2>
-                                            <img src={item.headerImg} alt='subreddit image' />
+                                            <img src={item.headerImg} alt='subreddit' />
                                             
                                     </div>
                                 </Link>
                             );
                         }
                         
-                    })}
+                    // }
+                    )}
                 </div>
             );
         }

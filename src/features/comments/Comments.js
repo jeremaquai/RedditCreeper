@@ -13,7 +13,7 @@ export default function Comments() {
     return (
         COMMENTS.map(comment => {
             return (
-                <div>
+                <div className="comment" >
                     <div key={comment.id} className="commentCard">
                         <div className="info">
                             <h4> {comment.author} </h4>
