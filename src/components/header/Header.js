@@ -14,7 +14,7 @@ export default function Header() {
                 </h1>
             </div>
             <div className="searchBar">
-                <SearchBar />
+                {/* <SearchBar /> */}
             </div>
         </header>
     );

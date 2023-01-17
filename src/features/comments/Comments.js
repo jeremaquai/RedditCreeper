@@ -24,18 +24,7 @@ export default function Comments() {
                             <p> {comment.body} </p>
                         </div>
                     </div>
-                    <div className="replies">
-                        if (comment.replies) {
-                            comment.replies.data.children.map(reply => {
-                                return (
-                                    <div key={reply.data.id} className="replyCard">
-                                        
-                                    </div>    
-                                );
-                            })
-                        } 
-                        
-                    </div>
+                    
                 </div>
             );
         })

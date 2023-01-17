@@ -34,7 +34,8 @@ export default function SubReddits() {
         while (isLoading) {
             return (
                 <div className="loading">
-                    <h2>Loading...</h2>
+                    <h2>Loading... All SubReddits...</h2>
+                    <h2>Please be Patient</h2>
                 </div>
             );
         } 
@@ -71,8 +72,7 @@ export default function SubReddits() {
 
     return (
         <div className="outerSub">
-            <h3>Ten Random SubReddits to Browse</h3>
-            <p>Refresh to change buttons</p>
+            
             {loadingAction()}
         </div>
     );
