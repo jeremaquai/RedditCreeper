@@ -31,7 +31,7 @@ export default function Posts() {
     useEffect(() => {
         const useThis = ACTIVE_SUB
         dispatch(fetchSubRedditPostsAsync(useThis));
-    }, [dispatch]);
+    }, [dispatch, ACTIVE_SUB]);
 
     const checkThumbnailAction = (item) => {
         if (item.thumbnail === 'self' || item.thumbnail === '') {

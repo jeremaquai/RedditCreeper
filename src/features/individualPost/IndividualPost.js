@@ -23,7 +23,7 @@ export default function IndividualPost() {
 
         dispatch(fetchIndividualPostAsync(useThis));
         dispatch(fetcchIndividualPostCommentsAsync(useThis));
-    }, [dispatch]);
+    }, [dispatch, ACTIVE_POST]);
 
     return (
         <div key={POST[0].id} className="indPostCard" >
