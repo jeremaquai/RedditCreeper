@@ -6,7 +6,6 @@ import {
     selectIsLoading,  
 } from "./subRedditsSlice";
 
-import { fetchSubRedditPostsAsync } from "../posts/postsSlice";
 
 import { 
     useDispatch,
@@ -44,7 +43,8 @@ export default function SubReddits() {
             return (
                 <div className="innerSub">
                     {subReddits.map(item => {
-                        if (!item) {
+                        
+                            if (!item) {
                             return ;
                         } else {
                             return (
@@ -58,12 +58,13 @@ export default function SubReddits() {
                                         }
                                         }>
                                             <h2>{item.url}</h2>
-                                            <img src={item.headerImg} />
+                                            <img src={item.headerImg} alt='subreddit image' />
                                             
                                     </div>
                                 </Link>
                             );
                         }
+                        
                     })}
                 </div>
             );

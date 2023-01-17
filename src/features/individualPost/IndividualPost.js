@@ -15,19 +15,14 @@ export default function IndividualPost() {
     const dispatch = useDispatch();
     const POST = useSelector(selectPost);
 
-    
-
-    const useACTIVE_POST = () => {
-        const ACTIVE_POST = useSelector(selectActivePosts);
-        return ACTIVE_POST
-    }
+    const ACTIVE_POST = useSelector(selectActivePosts);
 
     useEffect(() => {
 
-        
+        const useThis = ACTIVE_POST;
 
-        dispatch(fetchIndividualPostAsync(useACTIVE_POST));
-        dispatch(fetcchIndividualPostCommentsAsync(useACTIVE_POST));
+        dispatch(fetchIndividualPostAsync(useThis));
+        dispatch(fetcchIndividualPostCommentsAsync(useThis));
     }, [dispatch]);
 
     return (

@@ -19,17 +19,22 @@ export default function Posts() {
     
     const dispatch = useDispatch();
     
-    const ACTIVE_SUB = useSelector(selectActiveSub);
+    
     const POSTS = useSelector(selectPosts);
     const isLoading = useSelector(selectIsLoading);
 
+    
+    const ACTIVE_SUB = useSelector(selectActiveSub);
+        
+    
 
     useEffect(() => {
-        dispatch(fetchSubRedditPostsAsync(ACTIVE_SUB));
+        const useThis = ACTIVE_SUB
+        dispatch(fetchSubRedditPostsAsync(useThis));
     }, [dispatch]);
 
     const checkThumbnailAction = (item) => {
-        if (item.thumbnail === 'self') {
+        if (item.thumbnail === 'self' || item.thumbnail === '') {
             return redditLogo
         } else {
             return item.thumbnail;
@@ -58,7 +63,7 @@ export default function Posts() {
                                             dispatch(addActivePost(item.permalink));
                                         }
                                         }>
-                                    <img src={item.thumbnail} >
+                                    <img src={checkThumbnailAction(item)} alt='thumbnail' >
                                     </img>
                                     <div className="postCardInfo">
                                         <h3> {item.title} </h3>
