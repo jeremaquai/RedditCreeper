@@ -21,7 +21,8 @@
     border-bottom: 1px solid whitesmoke;
 }
 
-.indPostCard img {
+.indPostCard img,
+.indPostCard video {
     margin-top: 2rem;
     max-width: 60%;
     height: auto;

@@ -42,6 +42,8 @@ export const fetchSubRedditPostsAsync = createAsyncThunk(
                 downVotes: item.data.downs,
                 text: item.data.selftext,
                 thumbnail: item.data.thumbnail,
+                isVideo: item.data.is_video,
+                media: item.data.media,
             });
         })
 

@@ -73,12 +73,15 @@ export const fetchIndividualPostAsync = createAsyncThunk(
                 numComments: item.data.num_comments,
                 thumbnail: item.data.thumbnail,
                 title: item.data.title,
-                imgSrc: item.data.url,
+                url: item.data.url,
                 text: item.data.selftext,
                 subReddit: item.data.subreddit_name_prefixed,
                 downs: item.data.downs,
                 ups: item.data.ups,
                 upVoteRatio: item.data.upvote_ratio,
+                isVideo: item.data.is_video,
+                secureMedia: item.data.secure_media,
+                
             });
         });
     }

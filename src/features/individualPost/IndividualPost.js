@@ -17,6 +17,24 @@ export default function IndividualPost() {
 
     const ACTIVE_POST = useSelector(selectActivePosts);
 
+    const checkIsVideo = (itemToCheck) => {
+        if (itemToCheck.isVideo) {
+            console.log(itemToCheck.secureMedia.reddit_video.fallback_url);
+            return (
+                <video  src={itemToCheck.secureMedia.reddit_video.fallback_url} type='video/mp4' controls autoPlay>
+                </video>
+            );
+        } else if (itemToCheck.url.includes('clips.twitch.tv') && itemToCheck.secureMedia !== null) {
+            return (
+                <video src={itemToCheck.secureMedia.oembed.thumbnail_url} type='video/mp4' controls autoPlay >
+
+                </video>
+            );
+        } else {
+            return <img src={itemToCheck.url} />
+        }
+    }
+
     useEffect(() => {
 
         const useThis = ACTIVE_POST;
@@ -45,8 +63,8 @@ export default function IndividualPost() {
                 
                 
             </div>
-            
-            <img src={ POST[0].imgSrc ? POST[0].imgSrc : '#'} alt={''} />
+            { checkIsVideo(POST[0]) }
+            {/* <img src={ POST[0].url } alt={''} /> */}
             <p> {POST[0].text} </p>
             <Comments />
         </div>
