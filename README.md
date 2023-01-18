@@ -23,29 +23,29 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22114d3f-2f94-4646-b936-8cdd3ebcdd78/deploy-status)](https://app.netlify.com/sites/redditcreeper/deploys)
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/jeremaquai/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/jeremaquai/RedditCreeper">
+    <img src="./src/images/reddit-4.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">RedditCreeper</h3>
 
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/jeremaquai/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jeremaquai/RedditCreeper"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jeremaquai/repo_name">View Demo</a>
+    <a href="https://github.com/jeremaquai/RedditCreeper">View Demo</a>
     ·
-    <a href="https://github.com/jeremaquai/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/jeremaquai/RedditCreeper/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jeremaquai/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/jeremaquai/RedditCreeper/issues">Request Feature</a>
   </p>
 </div>
 
@@ -82,9 +82,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![RedditCreeper Screen Shot][product-screenshot]](https://redditcreeper.netlify.app/)
+[![RedditCreeper Screen Shot 2][product-screenshot2]](https://redditcreeper.netlify.app/)
+[![RedditCreeper Screen Shot 3][product-screenshot3]](https://redditcreeper.netlify.app/)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `jeremaquai`, `repo_name`, `twitter_handle`, `jeremiah-sparks-0ba36a239`, `gmail`, `jeremaquai`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `jeremaquai`, `RedditCreeper`, `twitter_handle`, `jeremiah-sparks-0ba36a239`, `gmail`, `jeremaquai`, `RedditCreeper`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -92,12 +94,12 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
+* [Node.js](https://nodejs.org/)
 * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
+* [React Router v5.3](https://v5.reactrouter.com/)
+* [React Redux](https://react-redux.js.org/)
+* [Redux Toolkit](https://redux-toolkit.js.org/)
+* [Jest](https://jestjs.io/)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
@@ -124,7 +126,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/jeremaquai/repo_name.git
+   git clone https://github.com/jeremaquai/RedditCreeper.git
    ```
 3. Install NPM packages
    ```sh
@@ -158,7 +160,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/jeremaquai/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/jeremaquai/RedditCreeper/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -196,7 +198,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - jeremaquai@gmail.com
 
-Project Link: [https://github.com/jeremaquai/repo_name](https://github.com/jeremaquai/repo_name)
+Project Link: [https://github.com/jeremaquai/RedditCreeper](https://github.com/jeremaquai/RedditCreeper)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -215,16 +217,18 @@ Project Link: [https://github.com/jeremaquai/repo_name](https://github.com/jerem
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/jeremaquai/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/jeremaquai/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jeremaquai/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/jeremaquai/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/jeremaquai/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/jeremaquai/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jeremaquai/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/jeremaquai/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/jeremaquai/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/jeremaquai/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/jeremaquai/RedditCreeper.svg?style=for-the-badge
+[contributors-url]: https://github.com/jeremaquai/RedditCreeper/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jeremaquai/RedditCreeper.svg?style=for-the-badge
+[forks-url]: https://github.com/jeremaquai/RedditCreeper/network/members
+[stars-shield]: https://img.shields.io/github/stars/jeremaquai/RedditCreeper.svg?style=for-the-badge
+[stars-url]: https://github.com/jeremaquai/RedditCreeper/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jeremaquai/RedditCreeper.svg?style=for-the-badge
+[issues-url]: https://github.com/jeremaquai/RedditCreeper/issues
+[license-shield]: https://img.shields.io/github/license/jeremaquai/RedditCreeper.svg?style=for-the-badge
+[license-url]: https://github.com/jeremaquai/RedditCreeper/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jeremiah-sparks-0ba36a239
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: ./src/images/RedditCreeperScreenShotOne.png
+[product-screenshot2]: ./src/images/RedditCreeperScreenShotTwo.png
+[product-screenshot3]: ./src/images/RedditCreeperScreenShotThree.png
