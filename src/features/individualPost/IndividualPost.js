@@ -31,7 +31,7 @@ export default function IndividualPost() {
                 </video>
             );
         } else {
-            return <img src={itemToCheck.url} />
+            return <img src={itemToCheck.url} alt='' />
         }
     }
 
