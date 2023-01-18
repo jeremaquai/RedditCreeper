@@ -24,7 +24,7 @@ export default function IndividualPost() {
                 <video  src={itemToCheck.secureMedia.reddit_video.fallback_url} type='video/mp4' controls autoPlay>
                 </video>
             );
-        } else if (itemToCheck.url.includes('clips.twitch.tv') && itemToCheck.secureMedia !== null) {
+        } else if (itemToCheck.url && itemToCheck.url.includes('clips.twitch.tv') && itemToCheck.secureMedia !== null) {
             return (
                 <video src={itemToCheck.secureMedia.oembed.thumbnail_url} type='video/mp4' controls autoPlay >
 
