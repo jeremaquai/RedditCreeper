@@ -16,7 +16,7 @@ export default function Comments() {
                 
                     <div key={comment.id} className="commentCard">
                         <div className="info">
-                            <h4> {comment.author} </h4>
+                            <h4> u/{comment.author} </h4>
                             <h4>Ups: {comment.ups} </h4>
                             <h4>Downs: {comment.downs} </h4>
                         </div>

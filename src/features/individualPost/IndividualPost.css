@@ -39,3 +39,18 @@
 .info {
     color: black;
 }
+
+@media only screen and (max-width: 500px) {
+    /* .indPostCard {
+        flex-direction: column-reverse;
+    } */
+
+    .indPostCard h2 {
+        font-size: 1.75rem;
+    }
+    
+    .indPostCard img {
+        min-width: 70vw;
+        max-width: 70vw;
+    }
+}
