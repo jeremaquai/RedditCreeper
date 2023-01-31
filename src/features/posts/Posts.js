@@ -74,11 +74,11 @@ export default function Posts() {
                                                 <h4 className="postInfoText">{item.author}</h4>
                                             </div>
                                             <div className="upVotes" >
-                                                <h4>Up Votes:  </h4>
+                                                <h4><i class="fa-solid fa-up-long"></i>  </h4>
                                                 <h4 className="postInfoText" >{item.upVotes}</h4>
                                             </div>
                                             <div className="downVotes" >
-                                            <h4>Down Votes: </h4>
+                                            <h4><i class="fa-solid fa-arrow-down-long"></i> </h4>
                                                 <h4 className="postInfoText" >{item.downVotes}</h4>
                                             </div>
                                             

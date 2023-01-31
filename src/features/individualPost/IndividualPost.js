@@ -52,11 +52,11 @@ export default function IndividualPost() {
                     <h3 className="info" > u/{POST[0].author} </h3>
                 </div>
                 <div className="upVotes" >
-                    <h3>Up Votes: </h3>
+                    <h3><i class="fa-solid fa-up-long"></i> </h3>
                     <h3 className="info" > {POST[0].ups}</h3>
                 </div>
                 <div className="downVotes" >
-                    <h3>Down Votes: </h3>
+                    <h3><i class="fa-solid fa-arrow-down-long"></i> </h3>
                     <h3 className="info" >{POST[0].downs} </h3>
                 </div>
                 
